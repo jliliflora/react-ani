@@ -37,7 +37,7 @@ const boxVariants = {
   drag: { backgroundColor: "rgb(80, 46, 204)", transition: { duration: 3 } },
 };
 
-function App() {
+function Drag() {
   const biggerBoxRef = useRef<HTMLDivElement>(null);
   return (
     <Wrapper>
@@ -58,4 +58,4 @@ function App() {
   // <Box drag="x" /> => x축으로만 움직이게끔 제약이 걸림
   // dragConstraints => 제약이 있는 BOX, 드레깅이 허용될 수 있는 영역
 }
-export default App;
+export default Drag;
