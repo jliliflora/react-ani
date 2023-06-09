@@ -15,20 +15,21 @@ const Box = styled(motion.div)`
   width: 200px;
   height: 200px;
   background-color: white;
-  border-radius: 40px;
+  border-radius: 15px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
-const boxVariants = {
-  hover: { scale: 1.5, rotate: 90 },
-  click: { scale: 1, borderRadius: "100px" },
+const myVars = {
+  start: { scale: 0 },
+  end: { scale: 1, rotateZ: 360, transition: { type: "spring", delay: 0.5 } },
 };
 
-function App() {
+function Animation() {
   return (
     <Wrapper>
-      <Box variants={boxVariants} whileHover="hover" whileTap="click" />
+      <Box variants={myVars} initial="start" animate="end" />
     </Wrapper>
   );
 }
-export default App;
+// <Box transition={{ duration: 3 }} animate={{ borderRadius: "100px" }} />
+export default Animation;

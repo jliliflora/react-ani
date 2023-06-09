@@ -24,11 +24,11 @@ const boxVariants = {
   click: { scale: 1, borderRadius: "100px" },
 };
 
-function App() {
+function Gestures() {
   return (
     <Wrapper>
       <Box variants={boxVariants} whileHover="hover" whileTap="click" />
     </Wrapper>
   );
 }
-export default App;
+export default Gestures;
