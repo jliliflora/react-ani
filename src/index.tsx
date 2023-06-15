@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import Animation from "./Animation";
+import Gestures from "./Gestures";
+import Variants from "./Variants";
 
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { RecoilRoot } from "recoil";
@@ -79,7 +82,7 @@ root.render(
     <RecoilRoot>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <App />
+        <Variants />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>
