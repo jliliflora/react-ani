@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background:linear-gradient(135deg, rgb(94 23 233), rgb(0 40 251));
 `;
 
 const BiggerBox = styled(motion.div)`
@@ -19,7 +20,7 @@ const BiggerBox = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  // overflow: hidden;
+  overflow: hidden;
 `;
 
 // 애니메이트된 스타일 컴포넌트를 사용하는 법!
@@ -38,9 +39,10 @@ const boxVariants = {
 };
 
 function Drag() {
-  const biggerBoxRef = useRef<HTMLDivElement>(null);
+  const biggerBoxRef = useRef<HTMLDivElement>(null); //내 코드로 특정 element를 잡을 수 있는 방법
   return (
     <Wrapper>
+      <Box drag variants={boxVariants} whileHover="hover" whileTap="click" whileDrag={{ backgroundColor: "rgb(46, 204, 113)"}} />
       <BiggerBox ref={biggerBoxRef}>
         <Box
           drag

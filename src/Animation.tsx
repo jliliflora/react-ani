@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background:linear-gradient(135deg,#e09,#d0e);
 `;
 
 // 애니메이트된 스타일 컴포넌트를 사용하는 법!
@@ -27,6 +28,11 @@ const myVars = {
 function Animation() {
   return (
     <Wrapper>
+      <Box
+        transition={{ type: "spring", delay: 0.5 }}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, rotateZ: 360 }}
+      />
       <Box variants={myVars} initial="start" animate="end" />
     </Wrapper>
   );

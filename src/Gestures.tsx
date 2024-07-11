@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background:linear-gradient(135deg,rgb(142 37 255), rgb(27 15 187));
 `;
 
 // 애니메이트된 스타일 컴포넌트를 사용하는 법!
@@ -23,10 +24,15 @@ const boxVariants = {
   hover: { scale: 1.5, rotate: 90 },
   click: { scale: 1, borderRadius: "100px" },
 };
+//hover, click 같은 이름은 그냥 마음대로 하고 싶은대로 지정해주면됨
 
 function Gestures() {
   return (
     <Wrapper>
+      <Box 
+      whileHover={{ scale: 1.5, rotateZ: 90}} 
+      whileTap={{ scale: 1, borderRadius: "100px"}} 
+      />
       <Box variants={boxVariants} whileHover="hover" whileTap="click" />
     </Wrapper>
   );

@@ -8,6 +8,8 @@ import Variants from "./Variants";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { RecoilRoot } from "recoil";
 import { darkTheme } from "./theme";
+import Drag from "./Drag";
+import MotionValue from "./MotionValue";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -66,7 +68,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color:black;
   line-height: 1.2;
-  background:linear-gradient(135deg,#e09,#d0e);
+  // background:linear-gradient(135deg,#e09,#d0e);
 }
 a {
   text-decoration:none;
@@ -82,7 +84,7 @@ root.render(
     <RecoilRoot>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <App />
+        <MotionValue />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>
