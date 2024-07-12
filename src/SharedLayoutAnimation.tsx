@@ -32,7 +32,7 @@ const Circle = styled(motion.div)`
 `;
 
 // 서로 다른 컴포넌트를 layoutId로 연결해서 animate를 보여주는 기능임... 뒤집어져
-function App() {
+function SharedLayout() {
   const [clicked, setClicked] = useState(false);
   const toggleClicked = () => setClicked((prev) => !prev);
   return (
@@ -46,4 +46,4 @@ function App() {
     </Wrapper>
   );
 }
-export default App;
+export default SharedLayout;

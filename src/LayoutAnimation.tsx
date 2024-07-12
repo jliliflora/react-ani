@@ -18,8 +18,7 @@ const Box = styled(motion.div)`
   background-color: rgba(255, 255, 255, 1);
   border-radius: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
@@ -31,19 +30,21 @@ const Circle = styled(motion.div)`
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
-// 서로 다른 컴포넌트를 layoutId로 연결해서 animate를 보여주는 기능임... 뒤집어져
-function App() {
+// layout => css의 변화가 자동으로 animate되는 기능!
+function Layout() {
   const [clicked, setClicked] = useState(false);
   const toggleClicked = () => setClicked((prev) => !prev);
   return (
     <Wrapper onClick={toggleClicked}>
-      <Box >
-        {!clicked ? <Circle layoutId="circle" style={{ borderRadius: 50 }} /> : null}
-      </Box>
-      <Box >
-        {clicked ? <Circle layoutId="circle" style={{ borderRadius: 0, scale: 2 }} /> : null}
+      <Box 
+        style={{ 
+          justifyContent: clicked ? "center" : "flex-start", 
+          alignItems: clicked ? "center" : "flex-start",
+        }}
+      >
+        <Circle layout />
       </Box>
     </Wrapper>
   );
 }
-export default App;
+export default Layout;
