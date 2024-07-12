@@ -52,7 +52,7 @@ const box = {
   })
 }
 
-function App() {
+function Slider() {
   const [visible, setVisible] = useState(1);
   const [back, setBack] = useState(false);
   const nextPlease = () => {
@@ -83,4 +83,4 @@ function App() {
     </Wrapper>
   );
 }
-export default App;
+export default Slider;
