@@ -39,7 +39,7 @@ const boxVariants = {
   }
 }
 
-function App() {
+function AnimatePre() {
   const [showing, setShowing] = useState(false);
   const toggleShowing = () => setShowing((prev) => !prev);
   return (
@@ -56,4 +56,4 @@ function App() {
     </Wrapper>
   );
 }
-export default App;
+export default AnimatePre;
