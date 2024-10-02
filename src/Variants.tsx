@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(135deg,#d0e,rgb(114 0 238));
+  background: linear-gradient(135deg, #d0e, rgb(114 0 238));
 `;
 
 // 애니메이트된 스타일 컴포넌트를 사용하는 법!
@@ -44,7 +44,7 @@ const boxVariants = {
       duration: 0.5,
       bounce: 0.5,
       //delayChildren, staggerChildren => 자식컴포넌트에 하나씩 부여하지않고 부모컴포넌트에서 한번에 컨트롤 되는 유틸리티
-      delayChildren: 0.5, 
+      delayChildren: 0.5,
       staggerChildren: 0.2,
     },
   },
