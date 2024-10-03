@@ -3,6 +3,11 @@ import styled from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { start } from "repl";
+import Planet004 from "./Components/Planets/Planet004";
+import Planet003 from "./Components/Planets/Planet003";
+import Planet002 from "./Components/Planets/Planet002";
+import Planet001 from "./Components/Planets/Planet001";
+import Planet005 from "./Components/Planets/Planet005";
 
 const Wrapper = styled(motion.div)`
   height: 100vh;
@@ -29,6 +34,15 @@ const Orbit = styled(motion.div)`
   position: absolute;
 `;
 
+const Svg = styled.svg`
+  width: 60px;
+  height: 60px;
+  path {
+    stroke: rgb(130, 130, 130);
+    stroke-width: 0.5;
+  }
+`;
+
 const conVariants = {
   start: { opacity: 1 },
   end: {
@@ -40,7 +54,6 @@ const conVariants = {
     },
   },
 };
-
 const orbitVariants = {
   start: {
     opacity: 0,
@@ -63,7 +76,7 @@ const lastOrbitVariants = {
   end: {
     opacity: 1,
     y: 0,
-    rotate: -19,
+    rotate: -20,
     transition: {
       duration: 1, // opacity와 y가 동시에 실행되도록 같은 duration을 설정
     },
@@ -74,6 +87,19 @@ function App() {
   return (
     <Wrapper>
       <OrbitContainer variants={conVariants} initial="start" animate="end">
+        <Svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="81"
+          height="81"
+          viewBox="0 0 81 81"
+          fill="none"
+        >
+          <motion.path
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
+            d="M40.932.932v80M60.931 6.29l-40 69.283m54.642-54.641-69.282 40m74.641-20h-80m74.641 20-69.282-40m54.64 54.641-40-69.282"
+          />
+        </Svg>
         <Orbit
           variants={orbitVariants}
           style={{ width: "32px", height: "13px" }}
@@ -100,52 +126,38 @@ function App() {
         ></Orbit>
         <Orbit
           variants={orbitVariants}
-          style={{ width: "145px", height: "45px" }}
-        ></Orbit>
+          style={{ width: "146px", height: "46px" }}
+        >
+          <Planet001 />
+        </Orbit>
         <Orbit
           variants={orbitVariants}
-          style={{ width: "245px", height: "80px" }}
-        ></Orbit>
+          style={{ width: "244px", height: "80px", rotate: -1 }}
+        >
+          <Planet002 />
+        </Orbit>
         <Orbit
           variants={orbitVariants}
-          style={{ width: "350px", height: "115px" }}
-        ></Orbit>
+          style={{ width: "350px", height: "116px" }}
+        >
+          <Planet003 />
+        </Orbit>
         <Orbit
           variants={orbitVariants}
           style={{ width: "460px", height: "150px" }}
         >
-          <motion.div
-            style={{
-              width: 10,
-              height: 10,
-              borderRadius: 100,
-              backgroundColor: "rgb(103, 101, 101)",
-              position: "absolute",
-              left: -10,
-              top: -10,
-            }}
-            animate={{
-              x: [
-                200, 250, 300, 370, 400, 370, 300, 250, 200, 150, 100, 30, 0,
-                30, 100, 150, 200,
-              ],
-              y: [
-                0, 10, 20, 50, 100, 150, 180, 190, 200, 190, 180, 150, 100, 50,
-                20, 10, 0,
-              ],
-              // rotate: -360,
-            }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-          />
+          <Planet004 />
         </Orbit>
         <Orbit
           variants={lastOrbitVariants}
           style={{
             width: "500px",
-            height: "155px",
+            height: "154px",
             border: " 0.5px dashed rgb(103, 101, 101)",
           }}
-        ></Orbit>
+        >
+          <Planet005 />
+        </Orbit>
       </OrbitContainer>
     </Wrapper>
   );
