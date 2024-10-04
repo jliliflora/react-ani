@@ -8,6 +8,7 @@ import Planet003 from "./Components/Planets/Planet003";
 import Planet002 from "./Components/Planets/Planet002";
 import Planet001 from "./Components/Planets/Planet001";
 import Planet005 from "./Components/Planets/Planet005";
+import SectionBg from "./SectionBg";
 
 const Wrapper = styled(motion.div)`
   height: 100vh;
@@ -15,7 +16,8 @@ const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  // position: relative;
+  overflow: hidden;
+  position: relative;
 `;
 
 const OrbitContainer = styled(motion.div)`
@@ -86,6 +88,7 @@ const lastOrbitVariants = {
 function App() {
   return (
     <Wrapper>
+      <SectionBg />
       <OrbitContainer variants={conVariants} initial="start" animate="end">
         <Svg
           xmlns="http://www.w3.org/2000/svg"
