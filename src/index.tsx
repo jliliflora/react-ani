@@ -10,6 +10,7 @@ import { RecoilRoot } from "recoil";
 import { darkTheme } from "./theme";
 import Drag from "./Drag";
 import MotionValue from "./MotionValue";
+import Texttest from "./Texttest002";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -84,7 +85,7 @@ root.render(
     <RecoilRoot>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <App />
+        <Texttest />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>
