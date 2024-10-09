@@ -26,7 +26,7 @@ const Character = styled(motion.span)`
   margin-right: -0.05em;
 `;
 
-function Texttest() {
+function App() {
   const textLines = [
     "Hello, I'm SeungYeon",
     "I love coding",
@@ -104,4 +104,4 @@ function Texttest() {
   );
 }
 
-export default Texttest;
+export default App;
