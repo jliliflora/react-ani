@@ -12,7 +12,7 @@ import Drag from "./Drag";
 import MotionValue from "./MotionValue";
 import Texttest from "./Texttest002";
 import OnHoverBox from "./OnHoverBox";
-import ScrollTest from "./ScrollProgressTest";
+import ScrollPage from "./ScrollPage";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -87,7 +87,7 @@ root.render(
     <RecoilRoot>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <ScrollTest />
+        <ScrollPage />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>
