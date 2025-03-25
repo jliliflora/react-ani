@@ -1,3 +1,5 @@
 import "styled-components";
 
-export interface DefaultTheme {}
+export interface DefaultTheme {
+  bgColor: string;
+}
