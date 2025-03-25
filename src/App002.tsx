@@ -8,7 +8,7 @@ import Planet003 from "./Components/Planets/Planet003";
 import Planet002 from "./Components/Planets/Planet002";
 import Planet001 from "./Components/Planets/Planet001";
 import Planet005 from "./Components/Planets/Planet005";
-import SectionBg from "./SectionBg";
+import SectionBg from "./portfolio/SectionBg";
 
 const Wrapper = styled(motion.div)`
   height: 100vh;

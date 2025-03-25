@@ -1,7 +1,7 @@
 import "./scss/scrollProgress.css";
 
-import Screen from "./Components/Screen";
-import { ScrollTriggerProvider } from "./Components/ScrollTriggerProvider";
+import Screen from "../Components/Screen";
+import { ScrollTriggerProvider } from "../Components/ScrollTriggerProvider";
 
 const SHOW_MARKERS = false;
 

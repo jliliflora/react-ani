@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { start } from "repl";
-import Planet004 from "./Components/Planets/Planet004";
-import Planet003 from "./Components/Planets/Planet003";
-import Planet002 from "./Components/Planets/Planet002";
-import Planet001 from "./Components/Planets/Planet001";
-import Planet005 from "./Components/Planets/Planet005";
+import Planet004 from "../Components/Planets/Planet004";
+import Planet003 from "../Components/Planets/Planet003";
+import Planet002 from "../Components/Planets/Planet002";
+import Planet001 from "../Components/Planets/Planet001";
+import Planet005 from "../Components/Planets/Planet005";
 
 const Wrapper = styled(motion.div)`
   height: 100vh;

@@ -1,20 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import Animation from "./Animation";
-import Gestures from "./Gestures";
-import Variants from "./Variants";
+// import App from "./App";
 
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { RecoilRoot } from "recoil";
 import { darkTheme } from "./theme";
-import Drag from "./Drag";
-import MotionValue from "./MotionValue";
-import Texttest from "./Texttest002";
-import OnHoverBox from "./OnHoverBox";
-import ScrollPage from "./ScrollPage";
-import Menu from "./Menu";
-import MenuTest from "./MenuTest";
+import MenuTest from "./portfolio/MenuTest";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');

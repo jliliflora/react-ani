@@ -2,9 +2,9 @@ import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
-import Section1 from "./Components/Section1";
-import Section2 from "./Components/Section2";
-import Section3 from "./Components/Section3";
+import Section1 from "../Components/Section1";
+import Section2 from "../Components/Section2";
+import Section3 from "../Components/Section3";
 
 const Main = styled.div`
   position: relative;
