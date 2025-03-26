@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { RecoilRoot } from "recoil";
-import { darkTheme } from "./theme";
+import { darkTheme, lightTheme } from "./theme";
 // import Final from "./Final";
 // import Gestures from "./Gestures";
 // import LayoutAnimation from "./LayoutAnimation";
@@ -85,7 +85,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
         <Main />
       </ThemeProvider>
