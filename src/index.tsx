@@ -5,14 +5,16 @@ import ReactDOM from "react-dom/client";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { RecoilRoot } from "recoil";
 import { darkTheme, lightTheme } from "./theme";
-import Final from "./Final";
-import Gestures from "./Gestures";
-import LayoutAnimation from "./LayoutAnimation";
-import MotionValue from "./MotionValue";
-import SharedLayout from "./SharedLayoutAnimation";
-import Variants from "./Variants";
-import TestLayout from "./portfolio2/Layout";
-import Main from "./portfolio2/Main";
+// import Final from "./Final";
+// import Gestures from "./Gestures";
+// import LayoutAnimation from "./LayoutAnimation";
+// import MotionValue from "./MotionValue";
+// import SharedLayout from "./SharedLayoutAnimation";
+// import Variants from "./Variants";
+// import TestLayout from "./portfolio2/Layout";
+// import Main from "./portfolio2/Main";
+// import Slider from "./Slider";
+import Soultion005 from "./codingtest/test005";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -87,8 +89,10 @@ root.render(
     <RecoilRoot>
       <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
-        <Main />
+        {/* <Main /> */}
         {/* <SharedLayout /> */}
+        {/* <Slider /> */}
+        <Soultion005 />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>
